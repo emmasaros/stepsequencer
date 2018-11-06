@@ -15,13 +15,11 @@ int led2 = 10;
 int led3 = 9;
 int led4 = 8;
 int led5 = 7;
-
 int buttonPin1 = 37;
 int buttonPin2 = 36;
 int buttonPin3 = 35;
 int buttonPin4 = 34;
 int buttonPin5 = 33;
-
 int leds[5] = { led1, led2, led3, led4, led5 }; //LED locations
 int potPin = A14; //location of tempo pot
 int midiArray[5] = {60, 60, 60, 60, 60}; //empty midi notes
@@ -29,12 +27,10 @@ int tempo = 0; //tempo variable
 int currentStep = 0;
 unsigned long lastStepTime = 0;
 int switchPin1 = 32; //toggleswitch location
-
 boolean lastButtonState[5] = { LOW, LOW, LOW, LOW, LOW };
 boolean buttonState[5] = { LOW, LOW, LOW, LOW, LOW };
 boolean on[5] = { false, false, false, false, false };
 int buttonPins[5] = { buttonPin1, buttonPin2, buttonPin3, buttonPin4, buttonPin5 };
-
 
 
 
@@ -46,7 +42,6 @@ void setup() {
   }
   pinMode(switchPin1, INPUT); //claiming toggles as inputs
 }
-
 
 
 
@@ -75,7 +70,6 @@ void sequence( ) { //change without delay
 }
 
 
-
 void incrementUp( ) {
   //increment up
   currentStep += 1;
@@ -92,7 +86,6 @@ void incrementDown( ) {
     currentStep = 4;
   }
 }
-
 
 
 void checkButtons( ) {
@@ -125,7 +118,6 @@ void setLeds() {
     }
   }
 }
-
 
 
 void loop() { //loop that allows toggle to choose which function mode you are in
